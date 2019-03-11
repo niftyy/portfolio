@@ -32,7 +32,7 @@
     </header>
   </section>
 
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top" id="main-nav">
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top" id="main-nav">
       <div class="container">
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
           <span class="navbar-toggler-icon"></span>
@@ -58,7 +58,7 @@
               <a href="#share-head-section" class="nav-link">Know More</a>
             </li>
             <li>
-                <a href="mailto:tusharsparte@gmail.com" class="nav-link"><i class="fas fa-envelope"></i>  Email me</a>
+                <a href="mailto:tusharsparte@gmail.com" class="nav-link"><i class="far fa-envelope"></i> Email me</a>
             </li>
           </ul>
         </div>
@@ -253,6 +253,7 @@
                     <li><a href="https://www.facebook.com/tushar.niftyy" target="_blank"><i class="fa fa-facebook"></i></a></li>
                     <li><a href="https://github.com/niftyy" target="_blank"><i class="fa fa-github"></i></a></li>
                     <li><a href="https://codepen.io/niftyy/" target="_blank"><i class="fa fa-codepen"></i></a></li>
+                    <li><a href="mailto:tusharsparte@gmail.com"><i class="far fa-envelope"></i></a></li>
                 </ul>
             </div>
             <small class="form-text text-muted">
@@ -278,7 +279,22 @@
   </script>
   <script>
     $('body').scrollspy({target: '#main-nav'});
+
     $('#main-nav a').on('click', function(e){
+      if(this.hash !== ''){
+        e.preventDefault();
+
+        const hash = this.hash;
+
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 900, function(){
+          window.location.hash = hash;
+        });
+      }
+    });
+
+    $('#home-section a').on('click', function(e){
       if(this.hash !== ''){
         e.preventDefault();
 
