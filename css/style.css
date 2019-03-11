@@ -80,8 +80,8 @@ a:hover {
 }
 
 .navbar {
-    border-bottom: #15B6B3 3px solid;
-    opacity: 1;
+    border-bottom: #008ed6 3px solid;
+    opacity: 1
 }
 
 footer {
@@ -91,6 +91,10 @@ footer {
 
 .footer-text{
     color: white;
+}
+
+#about{
+  
 }
 
 
@@ -141,7 +145,7 @@ padding-top: 150px;
 }
 
 #main-nav{
-  
+
 }
 
 .label{
@@ -227,3 +231,5 @@ footer {
     opacity: 1;
   }
 }
+
+/* adding button to home page */
