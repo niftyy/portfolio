@@ -79,6 +79,10 @@ a:hover {
     color: #E31B6D;
 }
 
+.navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
+  color: #E31B6D;
+}
+
 .navbar {
     border-bottom: #008ed6 3px solid;
     opacity: 1
